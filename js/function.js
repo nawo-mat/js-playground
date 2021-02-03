@@ -32,3 +32,21 @@ const double_arrow_short = (n) => n * 2;
 
 console.log(double_arrow(6));
 console.log(double_arrow_short(7));
+
+
+// デフォルト引数(ES2015)
+// デフォルト値があるような重要度の低い引数は後ろに置く
+const raise = (n, m = 2) => n ** m;
+
+console.log(raise(2, 3));
+console.log(raise(3));
+
+// レストパラメータ(ES2015)
+// 引数に'...'をつけることで「残りの引数」を配列として受け取ることができる
+const echoArgs = (a, b, ...rest) => {
+  console.log(a);
+  console.log(b);
+  console.log(rest);
+}
+
+console.log(echoArgs('first', 'second', 'third', 'forth', 'fifth'));
